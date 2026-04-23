@@ -2,7 +2,7 @@
 
 **Vertical SaaS PdM × AI-native Product Engineer**
 
-飲食多店舗向け経営管理SaaSのプロダクトマネジメントを主軸に、要件定義・仕様設計・UIモック・検証プラン・CS運用までを一気通貫で担当しています。Claude Code をはじめとするAIツールを日常運用し、複数テーマを並列で前進させる開発スタイルです。
+飲食多店舗向け経営管理SaaSのプロダクトマネジメントを主軸に、要件定義・仕様設計・UIモック・検証プラン・CS運用までを一気通貫で担当。Claude Code をはじめとするAIツールを日常運用し、複数テーマを並列で前進させる開発スタイルです。
 
 ---
 
@@ -19,21 +19,35 @@
 
 ---
 
-## 🗂 主要ポートフォリオ
+## 🗂 主要ポートフォリオ(テーマ別)
 
-### 🔥 最新・注目
+### 📊 経営ダッシュボード / KPI 指標
 
-| リポジトリ | 概要 | 役割 |
-|---|---|---|
-| [dashboard-metrics](https://github.com/suguru789987/dashboard-metrics) | フェーズ別ROI仕様モック(投資回収期間ベースの4段階ライフサイクル評価) | 要件整理・仕様設計・モック実装・意思決定 |
-| [rent-registration](https://github.com/suguru789987/rent-registration) | 地代家賃 仕様/モック/検証プラン18改訂 + 先出/切り戻しリリース設計 | 業界構造(3型)モデリング・検証シナリオ設計 |
-| [rakmy-owner-registration-mock](https://github.com/suguru789987/rakmy-owner-registration-mock) | **オーナー/管理者/従業員**の3階層画面系 + 権限設計 + 従業員打刻UX + ヘルプ全面改訂 | 権限マトリクス設計・従業員モバイル打刻フロー・招待メール72h仕様・用語統一判断・ヘルプIA再設計 |
-| [budget-period-setting](https://github.com/suguru789987/budget-period-setting) | 予算年度機能の仕様(DB設計+18画面影響マップ+Sorbet型付きRubyコード) | 要件〜実装手前まで落とし込み |
-| [rakmy-timerecord-import-spec](https://github.com/suguru789987/rakmy-timerecord-import-spec) | タイムレコードインポート仕様(2テンプレート方式+外部連携マッピング)+従業員データ登録 | テンプレート列設計・インポートフロー設計 |
+| リポジトリ | 概要 |
+|---|---|
+| [dashboard-metrics](https://github.com/suguru789987/dashboard-metrics) | フェーズ別ROI仕様モック(投資回収期間ベース4段階ライフサイクル + 業態×フェーズ×係数の三重決定ロジック) |
 
-### 👤 従業員向け画面系(モバイル打刻UX)
+### 🏢 会計ドメイン(地代家賃 / 費用実績 / 予算)
 
-rakmy-owner-registration-mock 内に収録している**従業員画面フロー**の見どころ:
+| リポジトリ | 概要 |
+|---|---|
+| [rent-registration](https://github.com/suguru789987/rent-registration) | 地代家賃 仕様/モック/検証プラン18改訂 + 先出/切り戻しリリース設計 + 単月費用設定モック |
+| [rakmy-owner-registration-mock](https://github.com/suguru789987/rakmy-owner-registration-mock) | **費用実績入力機能**(地代家賃実績モーダル + 検証/UIロジック/CS申し送り8ファイル) + 権限設計 + 従業員画面 |
+| [budget-period-setting](https://github.com/suguru789987/budget-period-setting) | 予算年度機能(DB設計 + 18画面影響マップ + Sorbet型付きRubyコード) |
+| [v15_budget_simulator](https://github.com/suguru789987/v15_budget_simulator) | 予算シミュレーター v6.4(実運用ツール、デモデータ/エクスポート機能付き) |
+| [rakumy-budget-tools](https://github.com/suguru789987/rakumy-budget-tools) | 顧客予算CSV取込ツール v5.9/v6.1 + 独立仕様書2本 |
+| [rakumy-budget-mapping](https://github.com/suguru789987/rakumy-budget-mapping) | 顧客予算 → ラクミー予算フォーマット変換仕様 + **科目コードマスタ** |
+
+### 👥 人事・労務(権限階層 / 従業員 / 勤怠)
+
+| リポジトリ | 概要 |
+|---|---|
+| [rakmy-owner-registration-mock](https://github.com/suguru789987/rakmy-owner-registration-mock) | **オーナー/管理者/従業員**の3階層権限画面系 + 従業員モバイル打刻UX + ヘルプIA再設計 |
+| [rakmy-timerecord-import-spec](https://github.com/suguru789987/rakmy-timerecord-import-spec) | タイムレコードインポート(2テンプレート方式 + KoT/Jobcan列マッピング + 入力ガイド) |
+
+#### 従業員向け画面フロー(見どころ)
+
+rakmy-owner-registration-mock 内に収録:
 
 - 招待メール → PW設定 → ログイン → 打刻開始 の完全フロー
 - 出勤/退勤ボタンの打刻画面(モバイル前提UX)
@@ -43,15 +57,19 @@ rakmy-owner-registration-mock 内に収録している**従業員画面フロー
 - 交通費入力時の**赤枠ハイライトUX**(店舗変更時の入力忘れ防止、outline CSS採用)
 - 従業員アプリ向けヘルプ「はじめての方へ」「招待メールが届かない」「打刻を忘れた」
 
-### 📁 外部連携/マッピング
+### 🔌 外部連携・データマッピング
 
 | リポジトリ | 概要 |
 |---|---|
-| [rakumy-budget-mapping](https://github.com/suguru789987/rakumy-budget-mapping) | 顧客予算CSV → ラクミー予算フォーマット変換仕様 + 科目コードマスタ |
-| [rakumy-inventory-mapping](https://github.com/suguru789987/rakumy-inventory-mapping) | インフォマート → ラクミー 棚卸マッピング表 |
-| [rakumy-screen-mapping](https://github.com/suguru789987/rakumy-screen-mapping) | 会社画面/店舗画面の全画面マッピングリスト v21 |
-| [rakumy-budget-tools](https://github.com/suguru789987/rakumy-budget-tools) | 予算CSV取込ツール |
-| [v15_budget_simulator](https://github.com/suguru789987/v15_budget_simulator) | 予算シミュレーター(v5.8 → v17 まで継続進化) |
+| [rakumy-inventory-mapping](https://github.com/suguru789987/rakumy-inventory-mapping) | インフォマート → ラクミー 棚卸マッピング表 v3(商品マスタ/パイプライン) |
+| [rakumy-budget-mapping](https://github.com/suguru789987/rakumy-budget-mapping) | 顧客独自予算CSV → ラクミー予算フォーマット変換ロジック + 科目コードマスタ |
+| [rakmy-timerecord-import-spec](https://github.com/suguru789987/rakmy-timerecord-import-spec) | KoT/Jobcan 勤怠サービスCSVの列マッピング |
+
+### 🗺 内部構造マッピング
+
+| リポジトリ | 概要 |
+|---|---|
+| [rakumy-screen-mapping](https://github.com/suguru789987/rakumy-screen-mapping) | 会社画面/店舗画面 全機能マッピングリスト v21(21回バージョン進化) |
 
 ---
 
@@ -62,16 +80,17 @@ rakmy-owner-registration-mock 内に収録している**従業員画面フロー
 **DB:** MySQL / Redis  
 **SaaS運用:** GitHub / Notion / Linear / Google Workspace  
 **モック制作:** 静的HTML/CSS/JS (JS framework非依存、対話型で意思決定スピードを優先)  
-**検証/QA:** TSV検証プラン + 計算根拠記述
+**検証/QA:** TSV検証プラン + 計算根拠記述(CVP分析など)
 
 ---
 
 ## 📊 数字で見る直近4ヶ月(2025/12〜2026/04)
 
-- 並行推進テーマ **17件**(地代家賃/予算/タイムレコ/棚卸/ダッシュボード等)
+- 並行推進テーマ **17件**(地代家賃/予算/タイムレコ/棚卸/ダッシュボード/権限/費用実績等)
 - 検証プラン改訂回数 **18回**(地代家賃単体、2026/03/19〜04/08)
 - Git コミット数 **日次5件**を記録する日もあり(UIロジック詰め時)
-- 制作ドキュメント種別 **7種**(HTMLモック/Markdownspec/TSV検証/CSVマッピング/HAML/Rubyコード片/ヘルプページ)
+- 制作ドキュメント種別 **7種**(HTMLモック/Markdown spec/TSV検証/CSVマッピング/HAML/Rubyコード片/ヘルプページ)
+- 画面マッピング **v21 到達**(継続的な内部構造整理)
 
 ---
 
