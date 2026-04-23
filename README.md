@@ -32,7 +32,8 @@
 | リポジトリ | 概要 |
 |---|---|
 | [rent-registration](https://github.com/suguru789987/rent-registration) | 地代家賃 仕様/モック/検証プラン18改訂 + 先出/切り戻しリリース設計 + 単月費用設定モック |
-| [rakmy-owner-registration-mock](https://github.com/suguru789987/rakmy-owner-registration-mock) | **費用実績入力機能**(地代家賃実績モーダル + 検証/UIロジック/CS申し送り8ファイル) + 権限設計 + 従業員画面 |
+| [expense-actual-registration](https://github.com/suguru789987/expense-actual-registration) | **費用実績入力機能**(地代家賃実績モーダル + 検証 + CS申し送り表 v1/v2 + UIロジック/ヘルプ改訂申し送り 計8ファイル) |
+| [rakmy-owner-registration-mock](https://github.com/suguru789987/rakmy-owner-registration-mock) | 権限設計 + 従業員画面(下記従業員向け画面系参照) |
 | [budget-period-setting](https://github.com/suguru789987/budget-period-setting) | 予算年度機能(DB設計 + 18画面影響マップ + Sorbet型付きRubyコード) |
 | [v15_budget_simulator](https://github.com/suguru789987/v15_budget_simulator) | 予算シミュレーター v6.4(実運用ツール、デモデータ/エクスポート機能付き) |
 | [rakumy-budget-tools](https://github.com/suguru789987/rakumy-budget-tools) | 顧客予算CSV取込ツール v5.9/v6.1 + 独立仕様書2本 |
