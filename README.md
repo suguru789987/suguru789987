@@ -19,6 +19,22 @@
 
 ---
 
+## 🔴 ライブデモ(ブラウザで直接動くモック)
+
+クリック1回で動作する公開デモ。仕様書を読む前に動くUIを触れます。
+
+| デモ | URL |
+|---|---|
+| 📊 フェーズ別ROI ダッシュボード | https://suguru789987.github.io/dashboard-metrics/ |
+| 🏢 地代家賃 仕様モック | https://suguru789987.github.io/rent-registration/ |
+| 💰 費用実績入力 モーダル | https://suguru789987.github.io/expense-actual-registration/ |
+| 👥 権限設計+従業員画面 | https://suguru789987.github.io/rakmy-owner-registration-mock/ |
+| 🧾 予算年度設定 | https://suguru789987.github.io/budget-period-setting/ |
+| ⏱ タイムレコード インポート | https://suguru789987.github.io/rakmy-timerecord-import-spec/ |
+| 📦 棚卸商品管理 | https://suguru789987.github.io/inventory-product-management/ |
+
+---
+
 ## 🗂 主要ポートフォリオ(テーマ別)
 
 ### 📊 経営ダッシュボード / KPI 指標
