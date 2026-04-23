@@ -27,9 +27,21 @@
 |---|---|---|
 | [dashboard-metrics](https://github.com/suguru789987/dashboard-metrics) | フェーズ別ROI仕様モック(投資回収期間ベースの4段階ライフサイクル評価) | 要件整理・仕様設計・モック実装・意思決定 |
 | [rent-registration](https://github.com/suguru789987/rent-registration) | 地代家賃 仕様/モック/検証プラン18改訂 + 先出/切り戻しリリース設計 | 業界構造(3型)モデリング・検証シナリオ設計 |
-| [rakmy-owner-registration-mock](https://github.com/suguru789987/rakmy-owner-registration-mock) | オーナー/管理者/従業員の3階層権限設計 + CSヘルプページ全面改訂 | 権限マトリクス設計・用語統一判断・ヘルプIA再設計 |
+| [rakmy-owner-registration-mock](https://github.com/suguru789987/rakmy-owner-registration-mock) | **オーナー/管理者/従業員**の3階層画面系 + 権限設計 + 従業員打刻UX + ヘルプ全面改訂 | 権限マトリクス設計・従業員モバイル打刻フロー・招待メール72h仕様・用語統一判断・ヘルプIA再設計 |
 | [budget-period-setting](https://github.com/suguru789987/budget-period-setting) | 予算年度機能の仕様(DB設計+18画面影響マップ+Sorbet型付きRubyコード) | 要件〜実装手前まで落とし込み |
-| [rakmy-timerecord-import-spec](https://github.com/suguru789987/rakmy-timerecord-import-spec) | タイムレコードインポート仕様(2テンプレート方式+外部連携マッピング) | テンプレート列設計・インポートフロー設計 |
+| [rakmy-timerecord-import-spec](https://github.com/suguru789987/rakmy-timerecord-import-spec) | タイムレコードインポート仕様(2テンプレート方式+外部連携マッピング)+従業員データ登録 | テンプレート列設計・インポートフロー設計 |
+
+### 👤 従業員向け画面系(モバイル打刻UX)
+
+rakmy-owner-registration-mock 内に収録している**従業員画面フロー**の見どころ:
+
+- 招待メール → PW設定 → ログイン → 打刻開始 の完全フロー
+- 出勤/退勤ボタンの打刻画面(モバイル前提UX)
+- 招待リンク有効期限 **72時間** の仕様と「招待リンク無効」エラーハンドリング
+- 打刻忘れ時の管理者連絡フロー
+- 従業員登録/編集モーダル(v1→v5で統一デザイン化)
+- 交通費入力時の**赤枠ハイライトUX**(店舗変更時の入力忘れ防止、outline CSS採用)
+- 従業員アプリ向けヘルプ「はじめての方へ」「招待メールが届かない」「打刻を忘れた」
 
 ### 📁 外部連携/マッピング
 
