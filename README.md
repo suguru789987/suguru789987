@@ -28,7 +28,12 @@
 | 📊 フェーズ別ROI ダッシュボード | https://suguru789987.github.io/dashboard-metrics/ |
 | 🏢 地代家賃 仕様モック | https://suguru789987.github.io/rent-registration/ |
 | 💰 費用実績入力 モーダル | https://suguru789987.github.io/expense-actual-registration/ |
-| 👥 権限設計+従業員画面 | https://suguru789987.github.io/rakmy-owner-registration-mock/ |
+| 👥 権限設計(オーナー/管理者/従業員 3階層統合) | https://suguru789987.github.io/rakmy-owner-registration-mock/ |
+| 👤 従業員 招待メール画面 | https://suguru789987.github.io/rakmy-owner-registration-mock/#c4 |
+| 🔐 従業員 PW設定画面(招待から到達) | https://suguru789987.github.io/rakmy-owner-registration-mock/#c5 |
+| 🚪 従業員 ログイン画面 | https://suguru789987.github.io/rakmy-owner-registration-mock/#login |
+| ❌ 従業員 無効な招待リンク(72h期限切れ等) | https://suguru789987.github.io/rakmy-owner-registration-mock/#invite-invalid |
+| 📋 従業員一覧(管理者視点、PW再発行/招待再送) | https://suguru789987.github.io/rakmy-owner-registration-mock/#c2 |
 | 🧾 予算年度設定 | https://suguru789987.github.io/budget-period-setting/ |
 | ⏱ タイムレコード インポート | https://suguru789987.github.io/rakmy-timerecord-import-spec/ |
 | 📦 棚卸商品管理 | https://suguru789987.github.io/inventory-product-management/ |
