@@ -204,8 +204,40 @@
 
 ---
 
+## 6. 状態遷移設計 → エージェント・レール（2026-05-25 追加）
+
+成果物の逆算（§1-5）に加え、状態遷移設計・情報設計の手法そのものが、AIエージェントのレール設計に直結することを実証した。
+
+### 6-1. 2つの設計ビュー（手法）
+- **UI法＝状態機械/分岐ビュー**: 1操作の取りうる状態の枝（空/エラー/削除後/競合/保護）を可視化し、未設計の遷移を発見
+- **スプレッドシート法＝データフロー/パイプラインビュー**: `input→操作→演算→output` を横に並べ、各ステップの必要機能・ステップ間契約・遷移先前提を記載
+- 両者はシステム設計の正準2ビュー（state machine / dataflow）。スプレッドシート法は**ほぼそのままエージェント・レール仕様**（型付きパイプライン＋前提条件ガード）
+
+### 6-2. スプレッドシート法の実物＝手書きのエージェント・ツール/知識レジストリ
+- `地代家賃仕様まとめ`＝式（AST）分解、`費用予算設定`＝リネージ表、`DD UIデータ定義表(29列)`＝完全コントラクト台帳、`費用予算マッピングV21`＝型付き変換(A/B/C/D)
+- DD UI 29列は grounding(データソース)・互換(マッチング制限🟢🟡🟠🔴)・計算(L0-L3/weighted_avg)・**時間軸(freeze_condition/recompute_trigger/snapshot)**・intent(主要目的/ユースケース="AI意思決定マッチング用")を一枚で持つ
+- マッピングV21の版数＋「v19修正:A→B」＝「AIに作らせ→意図通り照合→却下/修正」のレール開発ループの物証＝**UI無しのforcing function**
+
+### 6-3. 目的プリセット駆動＝意図層×ツールレジストリ＝汎用レール基礎構造
+- 現行DnDの手動ドロップを、**バンドルワード（意思決定目的マスタ PUR8カテゴリ）駆動**に変える設計＝AIエージェントの正準アーキタイプ（意図→検索→ガード→合成→説明）
+- 4ワード: **§8昇格(入口)／結線(PUR↔指標FK)／リゾルバ(中項目→ピボット構成)／ガード経由(COMPAT/型/粒度/データなしescalate)**
+- 実データ点検: 8カテゴリ中6つは網羅十分。結線ギャップ3点（仕入先分析の語彙ミスマッチ/未付与105行/PUR08未連携）を検出＝②照合が効いた箇所
+- この `意図ワード→タグ検索→互換ガード合成→決定論計算→as-of→説明付き出力` は**DnD限定でなく汎用のレール基礎構造**（rent/mapping/dashboardにも適用可）
+
+### 6-4. 実証アーティファクト（agent-rails/）
+- rent: 7層フルレール（schema/capabilities/calc_tool/guardrails/eval/critic/**workflow=実行状態機械**）
+- dnd: 目的プリセット駆動レール（intent_taxonomy/resolver/guards/coverage_report/eval）
+
+### 6-5. 設計力像（結論）
+- 「UIモックを作るPdM」でなく、**ドメイン特化のデータ/ソリューション・アーキテクト**。AI込みでは**エージェント・レール・アーキテクト**（設計・判断・検証=人間、生産・形式化・列挙=AI、moat②③④⑤は人間に残存）
+
+---
+
 ## 関連リソース
 
+- エージェント・レール実証雛形:
+  - [rent-registration / agent-rails](https://github.com/suguru789987/rent-registration/tree/main/agent-rails)（7層フルレール）
+  - [rakmy-ui-customization-dnd / agent-rails](https://github.com/suguru789987/rakmy-ui-customization-dnd/tree/main/agent-rails)（目的プリセット駆動）
 - 各リポの逆算詳細（`R-xxx`）: 下記リポの `JUDGMENT_LOG.md` に同内容を分散記録
   - [expense-actual-registration](https://github.com/suguru789987/expense-actual-registration/blob/main/JUDGMENT_LOG.md)
   - [rent-registration](https://github.com/suguru789987/rent-registration/blob/main/JUDGMENT_LOG.md)
